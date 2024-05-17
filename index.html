@@ -6,12 +6,97 @@
 
     <!-- styles -->
     <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- insert bootstrap link -->
     <!-- title -->
     <title>Rock Paper Scissor</title>
   </head>
   <body>
+
+    <main>
+      <div id="menu">
+
+        <h1 class=" text-center text-white px-5 bg-blueGradiant">WellCome</h1>
+        <button onclick="singlePlay()">Play With AI</button>
+        <button onclick="twoPlay()">Play Friendly</button>
+
+      </div>
+
+      <div id="singlePlay">
+
+        <div class=" p-3 text-center bg-blueGradiant text-white">
+          <h3 class="p-Bold bg-blueGradiant" id="title">Rock Paper Scissors</h3>
+        </div>
+
+        <div id="score">
+          <h3>You 0 : 0 Ai</h3>
+        </div>
+
+        <div id="draw">
+            <h1>DRAW!</h1>
+        </div>
+
+        <div id="win">
+          <h1>You Win!</h1>
+        </div>
+
+        <div id="lose">
+            <h1>You Lost!</h1>
+        </div>
+
+        <div id="turn">
+          <h3>Your Turn !</h3>
+        </div>
+
+
+        <div class="row text-center" style="background: var(--blueGradiant, #3B2A9F);">
+          <div class="col-4 ">
+            <div>
+              <img src="assets/images/paper.png" alt="paper"> 
+            </div>
+            <div class="py-5" id="paper-button" >
+              <input type="radio" name="choice" value="paper" id="paper-button" class="choice-input">
+
+              <!-- <button style="border-radius: 100%;" class="bg-orange border-0">P</button> -->
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div>
+              <img src="assets/images/scissor.png" alt="scissor">
+            </div>
+            <div class="py-5" id="scissor-button" >
+              <input type="radio" name="choice" value="scissor" id="scissor-button" class="choice-input">
+
+              <!-- <button style="border-radius: 100%;" class="bg-orange border-0">S</button> -->
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div>
+              <img src="assets/images/rock.png" alt="rock">
+            </div>
+            <div class="py-5">
+              <input type="radio" name="choice" value="rock" id="rock-button" class="choice-input">
+
+              <!-- <button style="border-radius: 100%;" id="rock-button" class="bg-orange border-0">R</button> -->
+            </div>
+          </div>
+        </div>
+
+        
+        <div>
+          <button id="start" onclick="start()" class="display-6 text-white bg-blueGradiant border-1 border-light rounded-4">
+            START
+          </button>
+        </div>
+      </div>
+
+
+    </main>
     <!-- scripts -->
-    <script src="./script/main.js"></script>
+    <script src="script/main.js"></script>
   </body>
 </html>
